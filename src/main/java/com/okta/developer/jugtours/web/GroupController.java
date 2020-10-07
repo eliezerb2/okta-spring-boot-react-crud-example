@@ -35,7 +35,8 @@ class GroupController {
 
     @GetMapping("/groups")
     Collection<Group> groups(Principal principal) {
-        return groupRepository.findAllByUserId(principal.getName());
+//        return groupRepository.findAllByUserId(principal.getName());
+        return groupRepository.findAll();
     }
 
     @GetMapping("/group/{id}")
